@@ -1,4 +1,4 @@
-step1: clone the code my my repo using :git clone <repo> <directory>
+step1: download the code as zip and extract to a specifc folder or using :git clone <repo> <directory>
 step2:go the respective folder and open sln. file in visual studio 
 step3:Create a database named as :MVCdapperDb
 step 4: executes usp like 
