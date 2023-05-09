@@ -1,1 +1,28 @@
+step1: clone the code my my repo using :git clone <repo> <directory>
+step2:go the respective folder and open sln. file in visual studio 
+step3:Create a database named as :MVCdapperDb
+step 4: executes usp like 
 
+CREATE PROC EmployeeAddOrEdit
+@EmployeeId int,
+@Name varchar (50),
+@Age int,
+@Salary int
+AS
+IF (@EmployeeId =0)
+INSERT INTO
+Employee (Name, Age, Salary)
+VALUES (@Name, @Age, @Salary)
+ELSE
+UPDATE Employee
+SET
+ Name = @Name, 
+ Age = @Age,
+Salary = @Salary
+WHERE @EmployeeId = @EmployeeId
+
+
+also scripts uploaded.
+step5: Run the project by chnaging this connection string to ur DB  { private static string ConnectionStrings = "Server=LAPTOP-0VT9JPBO\\SQLEXPRESS; Database=MVCdapperDb; Trusted_Connection=True; MultipleActiveResultSets=true";
+}
+in Dapper.cs
